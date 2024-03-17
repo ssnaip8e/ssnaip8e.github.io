@@ -1,88 +1,25 @@
 <!DOCTYPE html>
-<html lang="ru"><!---->
+<html lang="ru">
 <head>
-	<meta charset="utf-8">
-	<!--<meta name="description" content="">
-	<meta name="keywords" content="">-->
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">	
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Portfolio</title>
-	<!-- ШРИФТ -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet">
-	<!-- ИКОНКА -->
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<!-- СТИЛЬ -->
-	<link rel="stylesheet" href="css/myStyle.css">
+  <meta name="author" content="Kurtsou Kiryl">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PORTFOLIO</title>
+
+  <link rel="stylesheet" href="./index.css">
 </head>
-<body>
-	<!-- КОНТЕЙНЕР -->
-	<div class="container">
-		<!-- ШАПКА (баннер + навигация) -->
-		<header class="header" id="home">
-			<!-- Навигация -->
-			<div class="header_nav">
-				<a href="#home" class="header_nav__link">Home</a>
-				<a href="#work" class="header_nav__link">MyWork</a>
-				<a href="#contact" class="header_nav__link">Contact</a>
-			</div>
-			<!-- Баннер -->
-			<div class="banner">
-				<!-- Обертка -->
-				<div class="wrapper">
-					<h1 class="banner_title">Portfolio web-Developer Kiryl Kurtsou <span class="note-ru">Портфолио Разработчика Кирилла Курцова</span></h1>
-					<blockquote class="banner_bquote"><span>“Компьютерная индустрия — единственная отрасль, которая движима модой в большей степени, чем индустрия женской моды.”</span>
-					<br>
-					<br> 
-						- Ларри Эллисон</blockquote>
-				</div>
-				<img src="img/bg1.png" class="bg1" alt="картинка красками пляжа и воды с высоты"/>
-			</div>
-		</header>
-		<!-- КОНТЕНТ (Цитаты + мои работы) -->
-		<main class="content">
-			<!-- Цитаты -->
-			<div class="content_article">
-				<img src="img/bg2.png" class="bg2" alt="картинка красками пляжа и воды c акулой, с высоты"/>
-				<div class="content_article-block">
-					<blockquote class="content_article-block__bquote"><span>“Если бы мы побольше практиковались, у нас бы всегда получалось.”</span>
-					<br>
-					<br>  
-						- Фрэнсис Бёрнетт</blockquote>
-					<blockquote class="content_article-block__bquote"><span>“Простота — залог надежности.”</span>
-					<br>
-					<br>  
-						- Edsger W. Dijkstra</blockquote>
-				</div>
-			</div>
-			<!-- Мои работы -->
-			<div class="content_work" id="work">
-				<div class="content_work-block">
-					<div class="content_work-block__card"></div>
-				</div>
-			</div>
-		</main>
-		<!-- ПОДВАЛ (контакты) -->
-		<footer class="footer" id="contact">
-			<div class="footer_contact">
-				<div class="footer_contact-item">
-					<img src="img/telegram.svg" alt="иконка телеграма"/>
-					<a href="https://t.me/KirKurtsou" class="footer_contact-item__telegram" target="_blank">@KirKurtsou</a>
-				</div>
-				<div class="footer_contact-item">
-					<img src="img/mail.svg" alt="иконка почты"/>
-					<a href="mailto:SSNAIPEROKK@GMAIL.COM" class="footer_contact-item__mail" target="_blank">NeKarim@yandex.by</a>
-				</div>
-				<div class="footer_contact-item">
-					<img src="img/github.svg" alt="иконка гитхаба"/>
-					<a href="https://github.com/ssnaip8e" class="footer_contact-item__github" target="_blank">github.com/ssnaip8e</a>
-				</div>
-				<p class="police">© Все мои записи защищены моим трудолюбием. 2022</p>
-			</div>
-		</footer>		
-	</div>
-	<!-- СКРИПТ -->
-	<script src="js/myScript.js"></script>
+<body class="home">
+  <div class="home__container box-sizing\border">
+    <h1 class="home__title">portfolio</h1>
+
+  <blockquote class="home__quote">
+    Компьютерная индустрия &ndash; единственная отрасль, которая движима модой в большей степени, чем индустрия женской моды<br><br>
+    <cite class="home__qoute-author">&ndash; Larry Ellison</cite>
+  </blockquote>
+
+  <a class="home__link link box-sizing\border" href="projects">projects</a>
+
+  </div>
 </body>
 </html>
