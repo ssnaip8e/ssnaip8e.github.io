@@ -10,9 +10,10 @@
   --ffamily-secondary: Verdana, Geneva, Tahoma, sans-serif;
   --fsize-heading: clamp(3rem, 10vw, 16rem);
   --fweight-heading: 400;
-  --fsize-title: ;
-  --fsize-subtitle: ;
+  --fsize-title: clamp(2rem, 5vw, 6rem);
+  --fsize-subtitle: clamp(.8rem, 1vw, 2rem);
   --fsize-quote: clamp(.8rem, 1vw, 2rem);
+  --fweight-subtitle: 400;
   --line-height-quote: 1.4;
   --fweight-quote-author: 600;
   --fweight-quote: 400;
@@ -147,16 +148,38 @@ img {
   height: 100%;
 }
 
-.home__navigation {
-  position: fixed;
-  bottom: 0;
-  z-index: 4;
-  width: 100%;
-  padding-left: 10%;
-  background: var(--primary);
-}
-
 .container {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  gap: 2rem;
+  padding-top: 2rem;
   max-width: 1060px;
   margin-inline: auto;
 }
+
+.project__description {
+  position: relative;
+  top: -100px;
+  left: 60px;
+}
+
+.project__title {
+  margin: 0;
+  font-family: var(--ffamily-primary);
+  font-size: var(--fsize-title);
+}
+
+.project__subtitle {
+  font-family: var(--ffamily-secondary);
+  font-size: var(--fsize-subtitle);
+  font-weight: var(--fweight-subtitle);
+}
+
+.link_absolute {
+  position: relative;
+  top: -260px;
+  left: 80%;
+}
+
+
