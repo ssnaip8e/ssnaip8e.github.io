@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="author" content="Kiryl Kurtsou">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test</title>
+  <link rel="stylesheet" href="./test.css">
+</head>
+<body>
+  
+  <nav class="nav">
+    <h1 class="title">portfolio</h1>
+    <a href="">contact</a>
+  </nav>
+
+  <div class="container">
+    <div class="project">
+      <figure>
+        <img src="./1_9wflJH9BoIuikX1CU9mAJA.webp" alt="">
+        <figcaption>
+          Lorem, ipsum.
+        </figcaption>
+      </figure>
+
+      <div class="extra">
+        <p class="extra__text">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, in!
+        </p>
+        <a href="">link</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <figure>
+        <img src="./1_9wflJH9BoIuikX1CU9mAJA.webp" alt="">
+        <figcaption>
+          Lorem, ipsum.
+        </figcaption>
+      </figure>
+
+      <div class="extra">
+        <p class="extra__text">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, in!
+        </p>
+        <a href="">link</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <figure>
+        <img src="./1_9wflJH9BoIuikX1CU9mAJA.webp" alt="">
+        <figcaption>
+          Lorem, ipsum.
+        </figcaption>
+      </figure>
+
+      <div class="extra">
+        <p class="extra__text">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, in!
+        </p>
+        <a href="">link</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <figure>
+        <img src="./1_9wflJH9BoIuikX1CU9mAJA.webp" alt="">
+        <figcaption>
+          Lorem, ipsum.
+        </figcaption>
+      </figure>
+
+      <div class="extra">
+        <p class="extra__text">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, in!
+        </p>
+        <a href="">link</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <figure>
+        <img src="./1_9wflJH9BoIuikX1CU9mAJA.webp" alt="">
+        <figcaption>
+          Lorem, ipsum.
+        </figcaption>
+      </figure>
+
+      <div class="extra">
+        <p class="extra__text">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil, in!
+        </p>
+        <a href="">link</a>
+      </div>
+    </div>
+  </div>
+
+<script>
+  const slider = document.querySelector('.container');
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  slider.addEventListener('mousedown', (e) => {
+    isDown = true;
+    slider.classList.add('active');
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+  });
+
+  slider.addEventListener('mouseleave', () => {
+    isDown = false;
+    slider.classList.remove('active');
+  });
+
+  slider.addEventListener('mouseup', () => {
+    isDown = false;
+    slider.classList.remove('active');
+  });
+
+  slider.addEventListener('mousemove', (e) => {
+    if(!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 3; //scroll-fast
+    slider.scrollLeft = scrollLeft - walk;
+    console.log(walk);
+  });
+</script>
+
+</body>
+</html>
