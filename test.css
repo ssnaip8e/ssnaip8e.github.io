@@ -1,7 +1,35 @@
+:root {
+/* colors */
+--primary: #ffffff;
+--secondary: #202020;
+--tertiary: #e66114;
+--neutral: #cccccc;
+--shadow: #eeeeee;
+
+/* fonts */
+--ffamily-primary: Georgia, serif;
+--ffamily-secondary: Tahoma, sans-serif;
+--fsize-logo: ;
+--fsize-title: ;
+--fsize-description: ;
+--fweight-heading: ;
+--fweight-title: ;
+--fweight-description: ;
+--lheight: 1.4;
+--lspacing: 2px;
+
+/* size */
+
+}
+
+
+
 body {
   margin: 0;
   padding-block: 2rem;
   overflow-x: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 .nav {
@@ -9,15 +37,33 @@ body {
   top: 0;
   left: 0;
   bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 2rem;
+  background-color: #fff;
+  box-shadow: 2px 0 12px var(--shadow);
 }
+
+.title {
+  font-variant: small-caps;
+  writing-mode: vertical-rl;
+  transform: scale(-1);
+}
+
+a:hover path {
+  fill: var(--tertiary);
+  /* stroke: black; */
+}
+
 
 .container {
   overflow-x: auto;
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
-  width: 100%;
-  height: 100%;
+  padding-left: 100px;
   gap: 5rem;
 }
 
