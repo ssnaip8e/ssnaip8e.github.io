@@ -58,7 +58,7 @@ img {
 .container {
   max-width: 60rem;
   margin-inline: auto;
-  padding: calc(var(--indent) * 1.5);
+  /* padding: calc(var(--indent) * 1.5); */
 }
 
 .container_full {
@@ -67,7 +67,9 @@ img {
 }
 
 .header {
-  margin-bottom: calc(var(--indent) * 4);
+  margin-bottom: calc(var(--indent) * 3);
+  padding-inline: calc(var(--indent) * 1.5);
+  padding-block: calc(var(--indent) * 4.5);
   color: var(--primary);
   background-color: var(--surface);
 }
@@ -100,7 +102,7 @@ img {
 }
 
 .main {
-  margin-bottom: calc(var(--indent) * 4);
+  margin-bottom: calc(var(--indent) * 3);
 }
 
 .project {
@@ -112,7 +114,7 @@ img {
 }
 
 .main__project:not(:last-child) {
-  margin-bottom: calc(var(--indent) * 2.5);
+  margin-bottom: calc(var(--indent) * 1.5);
 }
 
 .project__box-image {
@@ -170,6 +172,8 @@ img {
 }
 
 .footer {
+  padding-inline: calc(var(--indent) * 1.5);
+  padding-block: calc(var(--indent) * 2.5);
   background-color: var(--surface);
 }
 
