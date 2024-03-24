@@ -1,10 +1,10 @@
 :root {
   /* colors */
   --primary: #ffffff;
-  --secondary: #121212;
-  --accent-one: #15bc55;
-  --accent-two: #31764c;
-  --surface: #eeeeee;
+  --secondary: #323232;
+  --accent-one: #1fb27c;
+  --accent-two: #277458;
+  --surface: #323232;
 
   /* fonts */
   --ffamily-title: Georgia, Times, 'Times New Roman', serif; /* title */
@@ -58,8 +58,7 @@ img {
 .container {
   max-width: 60rem;
   margin-inline: auto;
-  padding-inline: calc(var(--indent) * 1.5);
-  padding-block: calc(var(--indent) * 1.5);
+  padding: calc(var(--indent) * 1.5);
 }
 
 .container_full {
@@ -69,6 +68,8 @@ img {
 
 .header {
   margin-bottom: calc(var(--indent) * 4);
+  color: var(--primary);
+  background-color: var(--surface);
 }
 
 .home__logo {
@@ -80,11 +81,12 @@ img {
   font-size: var(--fsize-logo);
   font-weight: var(--fweight-logo);
   font-variant: small-caps;
+  color: var(--accent-one);
 }
 
 .quote {
   margin: 0;
-  max-width: 40ch;
+  max-width: 50ch;
   font-family: var(--ffamily-text);
   font-size: var(--fsize-text);
   font-weight: var(--fweight-text);
@@ -177,6 +179,8 @@ img {
 }
 
 .copyright {
+  font-family: var(--ffamily-text);
   margin-bottom: 0;
   text-align: center;
+  color: var(--primary);
 }
