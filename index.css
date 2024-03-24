@@ -10,7 +10,7 @@
   --ffamily-title: Georgia, Times, 'Times New Roman', serif; /* title */
   --ffamily-text: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   --ffamily-link: Georgia, Times, 'Times New Roman', serif; /* button */
-  --fsize-logo: 1rem;
+  --fsize-logo: 1.5rem;
   --fsize-title: clamp(1.5rem, 5vw, 3rem);
   --fsize-link: clamp(1.2rem, 5vw, 2rem);
   --fsize-text: clamp(.8rem, 5vw, 1.5rem);
@@ -56,7 +56,7 @@ img {
 }
 
 .container {
-  max-width: 60rem;
+  max-width: 80rem;
   margin-inline: auto;
   /* padding: calc(var(--indent) * 1.5); */
 }
@@ -66,16 +66,27 @@ img {
   margin-block: 0;
 }
 
+.container_flex {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .header {
+  height: 100%;
+  max-height: 50svh;
   margin-bottom: calc(var(--indent) * 3);
   padding-inline: calc(var(--indent) * 1.5);
-  padding-block: calc(var(--indent) * 4.5);
+  padding-bottom: calc(var(--indent) * 2.5);
   color: var(--primary);
   background-color: var(--surface);
 }
 
-.home__logo {
-  margin-bottom: calc(var(--indent) * 2.5);
+@media screen and (max-width: 426px) {
+  .header {
+    min-height: 100svh;
+  }
 }
 
 .logo {
@@ -87,6 +98,7 @@ img {
 }
 
 .quote {
+
   margin: 0;
   max-width: 50ch;
   font-family: var(--ffamily-text);
