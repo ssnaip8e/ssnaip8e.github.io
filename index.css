@@ -1,147 +1,54 @@
 :root {
   /* colors */
-  --primary: #FFFFFF;
-  --secondary: #282828;
-  --accent-one: #5148a1;
-  --accent-two: #b4b4b4;
+  --primary: #ffffff;
+  --secondary: #121212;
+  --accent-one: #15bc55;
+  --accent-two: #31764c;
+  --surface: #eeeeee;
 
   /* fonts */
-  --ffamily-primary: Georgia, 'Times New Roman', Times, serif;
-  --ffamily-secondary: Verdana, Geneva, Tahoma, sans-serif;
-  --fsize-heading: clamp(3rem, 10vw, 16rem);
-  --fweight-heading: 400;
-  --fsize-title: clamp(2rem, 5vw, 6rem);
-  --fsize-subtitle: clamp(.8rem, 1vw, 2rem);
-  --fsize-quote: clamp(.8rem, 1vw, 2rem);
-  --fweight-subtitle: 400;
-  --line-height-quote: 1.4;
-  --fweight-quote-author: 600;
-  --fweight-quote: 400;
-  --fsize-link: 1.2rem;
+  --ffamily-title: Georgia, Times, 'Times New Roman', serif; /* title */
+  --ffamily-text: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --ffamily-link: Georgia, Times, 'Times New Roman', serif; /* button */
+  --fsize-logo: 1rem;
+  --fsize-title: clamp(1.5rem, 5vw, 3rem);
+  --fsize-link: clamp(1.2rem, 5vw, 2rem);
+  --fsize-text: clamp(.8rem, 5vw, 1.5rem);
+  --fweight-logo: 600;
+  --fweight-title: 600;
+  --fweight-text: 400;
   --fweight-link: 600;
-  --fsize-tag: ;
+  --lheight: 1.4;
+  --lspacing: 2px;
 
-}
+  /* size */
+  --indent: 1rem;
+
+  /* others */
+
+  }
 
 .box-sizing\border {
   box-sizing: border-box;
 }
 
-/* home page */
-.home {
-  position: relative;
-  margin: 0;
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
   color: var(--secondary);
   background-color: var(--primary);
 }
 
-.home_centered {
-  display: grid;
-  align-content: center;
-  justify-content: center;
-  min-height: 100lvh;
-}
-
-.home__container {
-  padding-inline: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-}
-
-.home__title {
-  margin-block: 0;
-  font-family: var(--ffamily-primary);
-  font-size: var(--fsize-heading);
-  font-weight: var(--fweight-heading);
-  text-transform: uppercase;
-  color: var(--secondary);
-}
-
-.home__quote {
+body {
   margin: 0;
-  max-width: 40ch;
-  font-family: var(--ffamily-secondary);
-  font-size: var(--fsize-quote);
-  text-align: center;
-  font-style: italic;
-  line-height: var(--line-height-quote);
-  text-align: left;
 }
 
-.home__qoute-author {
-  font-weight: var(--fweight-quote-author);
-}
-
-.link {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  max-width: 80px;
-  height: 60px;
-  padding: 5px 10px;
-  font-family: var(--ffamily-primary);
-  font-size: var(--fsize-link);
-  font-weight: var(--fweight-link);
-  line-height: 60px;
-  color: var(--primary);
+a {
+  display: inline-table;
   text-decoration: none;
-  text-align: center;
-  text-transform: capitalize;
-  border-radius: 2px;
-  transition: all .3s ease;
 }
-
-.link_primary {
-  max-width: 140px;
-  background-color: var(--accent-one);
-}
-
-.link_primary:hover {
-  padding-right: 24px;
-  padding-left: 8px;
-}
-
-.link_primary:after {
-  content: "\00BB";
-  position: absolute;
-  opacity: 0;
-  line-height: 40px;
-  top: 0;
-  right: -20px;
-  transition: 0.45s;
-}
-
-.link_primary:hover:after {
-  opacity: 1;
-  right: 10px;
-}
-
-.link_secondary {
-  background-color: var(--accent-two);
-}
-
-.link_secondary:hover {
-  padding-right: 8px;
-  padding-left: 24px;
-}
-
-.link_secondary:after {
-  content: "\00AB";
-  position: absolute;
-  opacity: 0;
-  line-height: 40px;
-  top: 0;
-  left: -20px;
-  transition: 0.45s;
-}
-
-.link_secondary:hover:after {
-  opacity: 1;
-  left: 10px;
-}
-
-/* projects pages */
 
 img {
   max-width: 100%;
@@ -149,37 +56,127 @@ img {
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  align-content: space-between;
-  gap: 2rem;
-  padding-top: 2rem;
-  max-width: 1060px;
+  max-width: 60rem;
   margin-inline: auto;
+  padding-inline: calc(var(--indent) * 1.5);
+  padding-block: calc(var(--indent) * 1.5);
 }
 
-.project__description {
+.container_full {
+  padding: 0;
+  margin-block: 0;
+}
+
+.header {
+  margin-bottom: calc(var(--indent) * 4);
+}
+
+.home__logo {
+  margin-bottom: calc(var(--indent) * 2.5);
+}
+
+.logo {
+  font-family: var(--ffamily-title);
+  font-size: var(--fsize-logo);
+  font-weight: var(--fweight-logo);
+  font-variant: small-caps;
+}
+
+.quote {
+  margin: 0;
+  max-width: 40ch;
+  font-family: var(--ffamily-text);
+  font-size: var(--fsize-text);
+  font-weight: var(--fweight-text);
+  font-style: italic;
+  line-height: var(--lheight);
+  letter-spacing: var(--lspacing);
+}
+
+.qoute__name-author {
+  font-weight: var(--fweight-title);
+}
+
+.main {
+  margin-bottom: calc(var(--indent) * 4);
+}
+
+.project {
+  max-width: 80rem;
+}
+
+.main__project {
   position: relative;
-  top: -100px;
-  left: 60px;
+}
+
+.main__project:not(:last-child) {
+  margin-bottom: calc(var(--indent) * 2.5);
+}
+
+.project__box-image {
+  margin: 0;
+  aspect-ratio: 16/9;
 }
 
 .project__title {
-  margin: 0;
-  font-family: var(--ffamily-primary);
+  padding-inline: calc(var(--indent) * 1.5);
+  margin-top: calc(var(--indent) / 2);
+  font-family: var(--ffamily-title);
   font-size: var(--fsize-title);
+  font-weight: var(--fweight-title);
 }
 
-.project__subtitle {
-  font-family: var(--ffamily-secondary);
-  font-size: var(--fsize-subtitle);
-  font-weight: var(--fweight-subtitle);
+.project__link {
+  position: absolute;
+  bottom: 9%;
+  right: 7%;
 }
 
-.link_absolute {
-  position: relative;
-  top: -260px;
-  left: 80%;
+@media screen and (min-width: 769px) {
+  .project__link {
+    bottom: 7%;
+  }
 }
 
+.link {
+  font-family: var(--ffamily-link);
+  font-size: var(--fsize-link);
+  font-weight: var(--fweight-link);
+  color: var(--accent-one);
+  transition: all .2s ease;
+}
 
+.link:hover {
+  color: var(--accent-two);
+}
+
+.link_image {
+  padding: calc(var(--indent) / 2);
+  line-height: 4px;
+  background-color: var(--accent-one);
+}
+
+@media screen and (min-width: 769px) {
+  .link_image {
+    padding: var(--indent);
+  }
+}
+
+.link_image:hover {
+  transform: scale(1.25);
+  background-color: var(--accent-two);
+}
+
+.footer {
+  background-color: var(--surface);
+}
+
+.nav {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.copyright {
+  margin-bottom: 0;
+  text-align: center;
+}
