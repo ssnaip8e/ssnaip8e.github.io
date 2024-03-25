@@ -1,53 +1,85 @@
 :root {
   /* colors */
-  --primary: #ffffff;
-  --secondary: #323232;
-  --accent-one: #1fb27c;
-  --accent-two: #277458;
-  --surface: #323232;
+  --bg: #191919;
+  --on-bg: #FFFFFF;
+  --surface-primary: #38F88B;
+  --on-surface-primary: #191919;
+  --on-surface-primary-variant: #15c15f;
+  --surface-secondary: #E5613A;
+  --on-surface-secondary: #191919;
+  --on-surface-secondary-variant: #e65d33;
+  --surface-tertiary: #5D97EB;
+  --on-surface-tertiary: #191919;
+  --on-surface-tertiary-variant: #4d8be2;
+  --surface-variant: #FFFFFF;
+  --on-surface-variant: #191919;
 
   /* fonts */
-  --ffamily-title: Georgia, Times, 'Times New Roman', serif; /* title */
-  --ffamily-text: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --ffamily-link: Georgia, Times, 'Times New Roman', serif; /* button */
-  --fsize-logo: 1.5rem;
-  --fsize-title: clamp(1.5rem, 5vw, 3rem);
-  --fsize-link: clamp(1.2rem, 5vw, 2rem);
-  --fsize-text: clamp(.8rem, 5vw, 1.5rem);
-  --fweight-logo: 600;
-  --fweight-title: 600;
-  --fweight-text: 400;
-  --fweight-link: 600;
-  --lheight: 1.4;
-  --lspacing: 2px;
+  --ffamily-primary: Georgia, Times, 'Times New Roman', serif;
+  --ffamily-secondary: Georgia, Times, 'Times New Roman', serif;
+  --ffamily-heading-1: var(--ffamily-primary);
+  --ffamily-heading-2: var(--ffamily-primary);
+  --ffamily-heading-3: var(--ffamily-primary);
+  --ffamily-heading-4: var(--ffamily-primary);
+  --ffamily-heading-5: var(--ffamily-primary);
+  --ffamily-heading-6: var(--ffamily-primary);
+  --ffamily-text: var(--ffamily-secondary);
+  --ffamily-link: var(--ffamily-secondary);
+  --ffamily-copyright: var(--ffamily-secondary);
+  --fsize-heading-1: ;
+  --fsize-heading-2: ;
+  --fsize-heading-3: ;
+  --fsize-heading-4: ;
+  --fsize-heading-5: ;
+  --fsize-heading-6: ;
+  --fsize-text: ;
+  --fsize-link: ;
+  --fsize-copyright: ;
+  --fweight-heading-1: ;
+  --fweight-heading-2: ;
+  --fweight-heading-3: ;
+  --fweight-heading-4: ;
+  --fweight-heading-5: ;
+  --fweight-heading-6: ;
+  --fweight-text: ;
+  --fweight-link: ;
+  --fweight-copyright: ;
+  --lheight-text: ;
+  --lheight-link: ;
+  --lspacing-heading: ;
+  --lspacing-text: ;
+  --lspacing-link: ;
 
   /* size */
-  --indent: 1rem;
+  --step: 1rem; /* 16px */
+  --padding-inline: calc(var(--step) * 1.5); /* 24px */
+  --padding-bottom: calc(var(--step) * 1.5 * 1.5);
+  --padding-top: calc(var(--step) * 1.5 * 1.5);
+  --margin-bottom: calc(var(--step) * 1.5 * 1.5);
+  --margin-top: calc(var(--step) * 1.5 * 1.5);
+  --border-radius-surface: 1rem;
+  --border-radius-full: 50%;
+  --container-padding-inline: calc(var(--step) * 1.5);
+  --mobile: 20rem; /* 320px */
+  --tablet: 48rem; /* 798px */
+  --netbook: 63rem; /* 1024px */
+  --desktop: 80rem; /* 1280px */
 
-  /* others */
-
+  /* others tools */
+  --transition-link: all .3s ease;
+  --transition-image: all .5s linear;
   }
 
-.box-sizing\border {
-  box-sizing: border-box;
-}
-
-html,
-body {
-  width: 100%;
-  height: 100%;
-  font-size: 16px;
-  color: var(--secondary);
-  background-color: var(--primary);
-}
-
-body {
-  margin: 0;
-}
-
+  /* reset common */
 a {
-  display: inline-table;
+  display: inline-block;
   text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 img {
@@ -55,18 +87,166 @@ img {
   height: 100%;
 }
 
-.container {
-  max-width: 80rem;
-  margin-inline: auto;
-  /* padding: calc(var(--indent) * 1.5); */
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
 }
 
+body { margin: 0; }
+
+/* mix */
+.box-sizing\border { box-sizing: border-box; }
+
+/* container */
+.container {
+  max-width: var(--desktop);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-inline);
+}
+/*
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: var(--container-tablet);
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .container {
+    max-width: var(--container-mobile);
+  }
+} */
+
+.header__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70vh;
+  padding-block: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.nav-site {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-site__menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.header__quote {
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
+  width: 100%;
+  max-width: 60ch;
+}
+
+.quote {
+  text-align: end;
+  font-size: clamp(1rem, 3vw, 2rem);
+  font-style: italic;
+}
+
+.header__greeting {
+  display: inline-block;
+  margin: 0;
+  font-size: clamp(6rem, 12vw, 12rem);
+  border-bottom: 1px solid #191919;
+}
+
+.header__title {
+  font-size: 1rem;
+}
+
+.main__container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 0;
+  margin-bottom: 4rem;
+}
+
+.project__box-image {
+  margin: 0;
+}
+
+.project__title {
+  position: relative;
+  margin-left: 1rem;
+  font-size: clamp(1.5rem, 5vw, 3rem);
+}
+
+.link_image {
+  position: absolute;
+  top: -90%;
+  right: 5%;
+  padding: .5rem;
+  line-height: 4px;
+  background-color: #4d8be2;
+  filter: opacity(.7);
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 426px) {
+  .link_image {
+    top: -80%;
+    padding: .75rem;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .link_image {
+    top: -60%;
+    padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .link_image {
+    top: -60%;
+    padding: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .link_image {
+    top: -80%;
+    padding: 1.5rem;
+  }
+}
+
+
+
+.copyright {
+  padding: 1rem;
+  font-size: .5rem;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 .container_full {
   padding: 0;
   margin-block: 0;
-}
+} */
 
-.container_flex {
+/* .container_flex {
   display: flex;
   height: 100%;
   flex-direction: column;
@@ -199,4 +379,4 @@ img {
   margin-bottom: 0;
   text-align: center;
   color: var(--primary);
-}
+} */
