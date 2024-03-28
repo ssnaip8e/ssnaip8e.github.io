@@ -15,21 +15,20 @@
   --ffamily-greeting: 'Cormorant Garamond', serif;
   --ffamily-link: Tahoma, Geneva, Verdana, sans-serif;
   --ffamily-blockquote: Tahoma, Geneva, Verdana, sans-serif;
-  --ffamily-description: Tahoma, Geneva, Verdana, sans-serif;
+  --ffamily-blockquote-author: 'Cormorant Garamond', serif;
   --ffamily-copyright: Tahoma, Geneva, Verdana, sans-serif;
-  --fsize-title-1: ;
-  --fsize-title-2: ;
-  --fsize-greeting: ;
+  --fsize-title-1: clamp(1.5rem, 10vw, 3rem);
+  --fsize-title-2: clamp(1.5rem, 10vw, 3rem);
+  --fsize-greeting: clamp(4rem, 10vw, 8rem);
   --fsize-link: .9rem;
-  --fsize-blockquote: ;
-  --fsize-description: ;
+  --fsize-blockquote: .8rem;
   --fsize-copyright: 80%;
-  --fweight-title-1: ;
-  --fweight-title-2: ;
-  --fweight-greeting: ;
+  --fweight-title-1: 600;
+  --fweight-title-2: 600;
+  --fweight-greeting: 600;
   --fweight-link: 400;
-  --fweight-blockquote: ;
-  --fweight-description: ;
+  --fweight-blockquote: 400;
+  --fweight-blockquote-author: 700;
   --fweight-copyright: ;
   --lspacing: 1px;
 
@@ -157,19 +156,18 @@ blockquote, cite {
   font-weight: var(--fweight-link);
   letter-spacing: var(--lspacing, 1px);
   text-transform: capitalize;
+  color: var(--secondary);
   background-color: var(--primary);
   transition: all var(--transition-hover-link) ease-in-out;
 }
 
 .link:after {
   content: attr(data-name-after);
-  color: var(--accent);
   transform: translateY(30px);
 }
 
 .link:before {
   content: attr(data-name-before);
-  color: var(--secondary);
   transform: translateY(0);
 }
 
@@ -185,7 +183,12 @@ blockquote, cite {
 .banner {
   display: flex;
   justify-content: space-between;
-  flex-flow: wrap;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.banner__image {
+  min-width: 300px;
 }
 
 .banner__image {
@@ -201,6 +204,81 @@ blockquote, cite {
   flex-direction: column;
   gap: var(--gap-intro);
 }
+
+.intro__greeting {
+  font-family: var(--ffamily-primary);
+  font-size: var(--fsize-greeting);
+  font-weight: var(--fweight-greeting);
+  color: var(--accent);
+  text-transform: capitalize;
+}
+
+.intro__title {
+  font-family: var(--ffamily-primary);
+  font-size: var(--fsize-title-1);
+  font-weight: var(--fweight-title-1);
+}
+
+.blockquote {
+  max-width: 60ch;
+  font-family: var(--ffamily-secondary);
+  font-size: var(--fsize-blockquote);
+  font-weight: var(--fweight-blockquote);
+}
+
+.blockquote__name-author {
+  font-family: var(--ffamily-blockquote-author);
+  font-style: normal;
+  font-weight: var(--fweight-blockquote-author);
+}
+
+
+
+
+
+
+
+
+.nav-site_mobile {
+  z-index: 4;
+  overflow: hidden;
+  text-align: end;
+  padding: 1rem;
+}
+
+input {
+  display: none;
+}
+input:checked ~ .mobile {
+  transform: translateY(10px);
+}
+
+.mobile {
+  /* display: none; */
+  background-color: var(--primary);
+  transform: translateY(-200px);
+  transition: all .3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+@media (max-width: 426px) {
+  .nav-site {
+    display: none;
+  }
+}
+
+@media (min-width: 426px) {
+  .nav-site_mobile {
+    display: none;
+  }
+}
+
+
+
+
+
 
 
 
