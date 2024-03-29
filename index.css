@@ -18,7 +18,7 @@
   --ffamily-blockquote-author: var(--ffamily-primary);
   --ffamily-copyright: var(--ffamily-secondary);
   --fsize-title-1: clamp(1.5rem, 5vw, 3rem);
-  --fsize-title-2: clamp(1.25rem, 5vw, 2rem);
+  --fsize-title-2: clamp(1rem, 5vw, 2rem);
   --fsize-greeting: clamp(4rem, 10vw, 8rem);
   --fsize-link: 1.25rem;
   --fsize-blockquote: .8rem;
@@ -343,7 +343,7 @@ img {
 
 .project__description {
   position: relative;
-  padding-left: 2rem;
+  padding-left: 1rem;
   font-family: var(--ffamily-secondary);
   font-size: var(--fsize-title-2);
   font-weight: 400;
