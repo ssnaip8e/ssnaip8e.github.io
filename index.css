@@ -104,12 +104,12 @@ img {
   min-height: 90svh;
   margin-bottom: 2rem;
 }
-
+/*
 @media (max-width: 769px) {
   .header {
     min-height: 100%;
   }
-}
+} */
 
 .header__flex {
   position: relative;
@@ -322,7 +322,7 @@ img {
 .projects:after {
   content: "";
   position: absolute;
-  top: -2rem;
+  top: -4rem;
   right: 2rem;
   bottom: 0;
   z-index: -1;
