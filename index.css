@@ -343,10 +343,11 @@ img {
 
 .project__description {
   position: relative;
-  padding-left: 1rem;
-  font-family: var(--ffamily-secondary);
+  padding-top: .5rem;
+  margin-left: 1.5rem;
+  font-family: var(--ffamily-title-2);
   font-size: var(--fsize-title-2);
-  font-weight: 400;
+  font-weight: var(--fweight-title-2);
 }
 
 .project__link {
