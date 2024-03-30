@@ -7,22 +7,27 @@
   <meta name="keywords" content="Портфолио, Portfolio, веб-разработчик, фронтендер, портфолио проектов, web developer, projects">
   <meta name="robots" content="index,follow">
   <meta name="author" content="Kiryl Kurtsou">
-
   <title>Портфолио разработчика</title>
-
   <link rel="stylesheet" href="./assets/fonts/stylesheet.css">
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="./styles/vars.css">
+  <link rel="stylesheet" href="./styles/base.css">
+  <link rel="stylesheet" href="./styles/modules/container.css">
+  <link rel="stylesheet" href="./styles/modules/header.css">
+  <link rel="stylesheet" href="./styles/modules/nav.css">
+  <link rel="stylesheet" href="./styles/modules/nav-mobile.css">
+  <link rel="stylesheet" href="./styles/modules/main.css">
+  <link rel="stylesheet" href="./styles/modules/project.css">
+  <link rel="stylesheet" href="./styles/modules/footer.css">
 </head>
-
 <body class="body">
 
   <header class="header">
     <div class="header__flex container">
       <nav class="nav">
-        <a class="nav__link" data-name-before="portfolio" data-name-after="portfolio" href="#">portfolio</a>
+        <a class="nav__link" data-name="portfolio" href="#">portfolio</a>
         <div class="nav__group-link">
-          <a class="nav__link" data-name-before="about me" data-name-after="about me" href="#">about&nbsp;me</a>
-          <a class="nav__link" data-name-before="contact" data-name-after="contact" href="#">contact</a>
+          <a class="nav__link" data-name="about me" href="#">about&nbsp;me</a>
+          <a class="nav__link" data-name="contact" href="#">contact</a>
         </div>
       </nav>
 
@@ -54,7 +59,7 @@
     </div>
   </header>
 
-  <main class="projects" id="projects">
+  <main class="main">
     <div class="project">
       <figure class="project__image">
         <img src="./assets/images-projects/project-07-2023.png" alt="project-07-2023">

@@ -1,0 +1,9 @@
+
+.footer {
+  text-align: center;
+}
+
+.copyright {
+padding: var(--padding);
+font-family: var(--ffamily-secondary);
+}

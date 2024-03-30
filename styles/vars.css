@@ -1,0 +1,34 @@
+
+:root {
+  /* colors */
+  --primary: rgb(244, 244, 244);
+  --secondary: rgb(35, 35, 35);
+  --secondary-variant: rgba(35, 35, 35, .5);
+  --accent: rgb(219, 61, 32);
+
+  /* fonts */
+  --ffamily-primary: 'Cormorant Garamond', serif;
+  --ffamily-secondary: Tahoma, sans-serif;
+  --fweight-bold: 700;
+  --fweight-regular: 400;
+  --lheight: 1.4;
+  --lspacing: 1px;
+  --fsize-greeting: clamp(4rem, 10vw, 8rem);
+  --fsize-title-banner: clamp(1.5rem, 5vw, 3rem);
+  --fsize-title-project: clamp(1.25rem, 5vw, 3rem);
+  --fsize-blockquote: .8rem;
+  --fsize-blockquote-author: 1rem;
+  --fsize-link: 1.25rem;
+
+  /* size */
+  --padding: 1rem;
+  --padding-top: .5rem;
+  --padding-block: 2rem;
+  --padding-inline: 1.5rem;
+  --margin-bottom: 4rem;
+  --margin-left: 2rem;
+
+  /* others */
+  --transition: all .3s ease-in-out;
+
+}
